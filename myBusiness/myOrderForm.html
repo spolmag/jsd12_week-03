@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select service</title>
+  </head>
+  <body>
+    <form action="">
+      <h1>ติดต่อบริการของเรา</h1>
+      <div id="customerDetails">
+        <h3>ผู้ติดต่อ</h3>
+        <label for="customerName">ชื่อลูกค้า</label>
+        <input
+          type="text"
+          id="customerName"
+          placeholder="ชื่อลูกค้า"
+          required
+        />
+        <br />
+        <label for="phone">หมายเลขโทรศัพท์</label>
+        <input
+          type="text"
+          id="phone"
+          placeholder="เบอร์โทรติดต่อกลับ"
+          required
+        />
+        <br />
+        <label for="otherContact">ช่องทางติดต่ออื่นๆ</label>
+        <input type="text" id="otherContact" placeholder="ช่องทางติดต่ออื่นๆ" />
+      </div>
+      <hr />
+      <div id="serviceType">
+        <h3>บริการที่ท่านสนใจ</h3>
+        <label for="paSystem">ระบบเสียงคอนเสิร์ต</label>
+        <input type="radio" name="service" id="paSystem" value="paSystem" />
+        <label for="meetingRoomSystem">ระบบเสียงห้องประชุม</label>
+        <input
+          type="radio"
+          name="service"
+          id="meetingRoomSystem"
+          value="meetingRoom"
+        />
+        <label for="others">ระบบภาพ/ระบบอื่นๆ</label>
+        <input type="radio" name="service" id="others" value="others" />
+        <br />
+        <textarea name="serviceDetails" id="serviceDetails">
+รายละเอียดเพิ่มเติม</textarea
+        >
+      </div>
+      <hr />
+      <div id="systemType">
+        <h3>ท่านสนใจระบบอนาล็อกหรือดิจิตอล</h3>
+        <label for="analogue">อนาล็อก</label>
+        <input type="radio" name="systemType" id="analogue" value="analogue" />
+        <label for="digital">ดิจิตอล</label>
+        <input type="radio" name="systemType" id="digital" value="digital" />
+        <label for="mixed">ผสมได้ทั้งสองระบบ</label>
+        <input type="radio" name="systemType" id="mixed" value="mixed" />
+        <br />
+        <textarea name="systemDetails" id="systemDetails">
+รายละเอียดเพิ่มเติม</textarea
+        >
+      </div>
+      <hr />
+      <div id="equipmentList">
+        <h3>อุปกรณ์ในระบบ</h3>
+        <label for="mixer">Mixer</label>
+        <input type="checkbox" name="equipment" id="mixer" value="mixer" />
+        <label for="speaker">Speaker</label>
+        <input type="checkbox" name="equipment" id="speaker" value="speaker" />
+        <label for="processor">Processor</label>
+        <input
+          type="checkbox"
+          name="equipment"
+          id="processor"
+          value="processor"
+        />
+        <label for="otherEquipment">อุปกรณ์อื่นๆ</label>
+        <input
+          type="checkbox"
+          name="equipment"
+          id="otherEquipment"
+          value="otherEquipment"
+        />
+        <br />
+        <textarea name="equipmentDetails" id="equipmentDetails">
+รายละเอียดเพิ่มเติม</textarea
+        >
+      </div>
+    </form>
+    <hr />
+    <footer>
+      <a href=" myBusiness.html">Let's see some of my jobs</a>
+      <br />
+      <a href="myProfile.html">Home</a>
+    </footer>
+  </body>
+</html>
