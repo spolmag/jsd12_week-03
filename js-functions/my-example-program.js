@@ -40,6 +40,9 @@ let unitLenghtCheck = 0;
 let inputTypeCheck = 0;
 let outputTypeCheck = 0;
 let totalCheck = "";
+let errUnitLenght = "Invalid unit lenght!";
+let errInputType = "Invalid input unit type!";
+let errOutputType = "Invalit output unit type!";
 
 rl.question(`Input unit lenght? : `, function (lenghtCheck) {
   let lenghtInput = parseFloat(lenghtCheck);
@@ -47,7 +50,7 @@ rl.question(`Input unit lenght? : `, function (lenghtCheck) {
     unitLenghtCheck = 1;
     // console.log(unitLenghtCheck);
   } else {
-    console.log("Invalid Unit lenght!");
+    unitLenghtCheck = 0;
   }
   rl.question(
     `Input unit type?, C: Centimeter / I: Inch / Y: Yard. : `,
@@ -82,15 +85,21 @@ rl.question(`Input unit lenght? : `, function (lenghtCheck) {
             inputTypeCheck.toString() +
             outputTypeCheck.toString();
           // console.log(totalCheck);
-          if (
-            unitLenghtCheck === 0 ||
-            inputTypeCheck === 0 ||
-            outputTypeCheck === 0
-          ) {
-            console.log(`Invalid unit lenght or unit type! Can't convert.`);
+          if (unitLenghtCheck === 0) {
+            console.log(errUnitLenght);
           }
-          if (inputTypeCheck === outputTypeCheck) {
-            console.log(`Same type! No need to convert.`);
+          if (inputTypeCheck === 0) {
+            console.log(errInputType);
+          }
+          if (outputTypeCheck === 0) {
+            console.log(errOutputType);
+          }
+          if (
+            inputTypeCheck === 1 &&
+            outputTypeCheck === 1 &&
+            inputType === outputType
+          ) {
+            console.log(`Same Input & Output type! No need to convert.`);
           }
 
           let result;
